@@ -33,7 +33,7 @@ export const ContextProvider = ({ children }) => {
       setErrors({});
       await api.get("/sanctum/csrf-cookie");
       await api.post(url, data);
-      await getUser(); // 🔥 TRÈS IMPORTANT
+      await getUser(); //
     } catch (e) {
       if (e.response?.status === 422) {
         setErrors(e.response.data.errors);
